@@ -1,6 +1,8 @@
 import boxShadows from '../base/boxShadows'
+import colors from '../base/colors'
 
 const { md } = boxShadows
+const { background } = colors
 
 const paper = {
   styleOverrides: {
@@ -10,7 +12,7 @@ const paper = {
       position: 'relative',
       minWidth: 0,
       wordWrap: 'break-word',
-      backgroundColor: 'rgb(0,0,0)',
+      backgroundColor: "transparent",
       backgroundClip: 'border-box',
       boxShadow: md,
       padding: '0',

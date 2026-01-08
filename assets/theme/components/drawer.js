@@ -1,13 +1,13 @@
 import boxShadows from '../base/boxShadows'
 import colors from '../base/colors'
 
-const { transparent, primary } = colors
+const { background, primary } = colors
 
 const drawer = {
   styleOverrides: {
     root: {
       boxShadow: boxShadows.lg,
-      backgroundColor: transparent.main,
+      backgroundColor: background.paper,
 
       '&:hover': {
         boxShadow: boxShadows.lg

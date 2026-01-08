@@ -16,8 +16,8 @@ export default function CustomCursor() {
     let mouseY = 0;
 
     const move = (e: MouseEvent) => {
-      mouseX = e.clientX + 14;
-      mouseY = e.clientY + 14;
+      mouseX = e.clientX - 14;
+      mouseY = e.clientY - 14;
     };
 
     const tick = () => {

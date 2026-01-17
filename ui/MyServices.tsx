@@ -2,7 +2,7 @@ import HorizontalScrollSection from '@/components/HorizontalScroll'
 import { Box } from '@mui/material'
 import React from 'react'
 
-const MyServives = () => {
+const MyServices = () => {
     return (
         <HorizontalScrollSection height={100}>
             {[1, 2, 3, 4, 5].map((item) => (
@@ -27,4 +27,4 @@ const MyServives = () => {
     )
 }
 
-export default MyServives
+export default MyServices

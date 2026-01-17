@@ -1,5 +1,4 @@
 "use client"
-
 import { Paper, Typography } from "@mui/material";
 import Image from "next/image";
 import RootLayout from "./layout";
@@ -9,7 +8,11 @@ import { HeroSection } from "@/ui/HeroSection";
 import NavigationBar from "@/ui/NavigationBar";
 import FooterSection from "@/ui/footer-section";
 import CustomCursor from "@/components/CustomCursor";
-import MyServives from "@/ui/MyServives";
+import MyServives from "@/ui/MyServices";
+import MyPortfolio from "@/ui/MyPortfolio";
+import MyServices from "@/ui/MyServices";
+import ServicesCard from "@/components/ServicesCard";
+import HeroBase from "@/ui/HeroBase";
 
 export default function Home() {
 
@@ -29,9 +32,12 @@ export default function Home() {
 
       >
         <NavigationBar />
-        <HeroSection />
-        <MyServives />
-        <FooterSection />
+        <HeroBase/>
+        <ServicesCard/>
+        {/* <MyServices /> */}
+        {/* <MyPortfolio /> */}
+        {/* <HeroSection />  */}
+        {/* <FooterSection /> */}
       </Paper>
     </RootLayout>
   );

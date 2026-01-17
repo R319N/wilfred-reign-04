@@ -9,7 +9,7 @@ export const styles = {
     // filter: "drop-shadow(1px 1px 0 aquamarine) drop-shadow(-1px -1px 0 aqua)",
   },
   scrolledAppBar: {
-    borderRadius: (theme) => theme.borders.borderRadius.lg,
+    // borderRadius: (theme) => theme.borders.borderRadius.lg,
     // backgroundColor: "#dec5e3d3", 
     transition: "background-color padding 3s ease-in-out", // Smooth transition
     width: "100%",

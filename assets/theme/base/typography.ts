@@ -1,18 +1,16 @@
 import pxToRem from "../functions/pxToRem";
 import colors from "./colors";
-import { Poppins, Roboto, Saira } from "next/font/google";
+import { Saira } from "next/font/google";
 const { text, transparent } = colors;
 const saira = Saira({
-  weight: ["300", "400", "500", "700"],
+  weight: [],
   subsets: ["latin"],
   display: "swap",
 });
-// const poppins = Poppins({
-//   subsets: ['latin'],
-//   weight: '900', // Set the font weight to the boldest available
-// });
+
 const baseProperties = {
-  fontFamily: `${saira.style.fontFamily}, sans-serif`,
+  fontFamily: "...saira.className",
+  // fontFamily: `'Roboto', sans-serif`,
   fontWeightLighter: 100,
   fontWeightLight: 300,
   fontWeightRegular: 400,

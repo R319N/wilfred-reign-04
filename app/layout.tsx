@@ -7,7 +7,6 @@ import { Roboto } from "next/font/google";
 import React, { useEffect } from "react";
 import uLwandleTheme from "@/assets/theme/uLwandleTheme";
 import SmoothScrollProvider from "@/assets/providers/smooth-scroll-provider";
-import CustomCursor from "@/components/CustomCursor";
 
 const roboto = Roboto({
   subsets: ["latin"],

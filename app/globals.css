@@ -39,3 +39,74 @@ button:hover~.custom-cursor {
   transition: transform 0.12s ease-out;
   will-change: transform, opacity;
 }
+
+.gradient-01 {
+  background-image: linear-gradient(270deg,
+      hsla(295, 76%, 51%, 0.192) 0%,
+      hsl(284deg 70% 73%) 26%,
+      hsl(256, 29%, 15%) 39%,
+      hsl(203, 57%, 9%) 50%,
+      hsl(215, 49%, 21%) 61%,
+      hsl(221, 69%, 42%) 74%,
+      hsla(220, 100%, 41%, 0.986) 100%);
+  filter: blur(125px);
+  transform: rotate(-114.2deg);
+  position: absolute;
+  width: 405px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: -20%;
+  top: 5%;
+  z-index: 1;
+   background-image: linear-gradient(270deg,
+      hsla(295, 76%, 51%, 0.192) 0%,
+      hsl(284deg 70% 73%) 26%,
+      hsl(256, 29%, 15%) 39%,
+      hsl(203, 57%, 9%) 50%,
+      hsl(215, 49%, 21%) 61%,
+      hsl(221, 69%, 42%) 74%,
+      hsla(220, 100%, 41%, 0.986) 100%);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+  z-index: -1;
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient-05 {
+  position: absolute;
+  width: 604px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+  /* background: #6f93ff; */
+  filter: blur(50px);
+  border-radius: 50%;
+  transform: rotate(-23.13deg);
+  background-image: linear-gradient(270deg,
+      hsla(295, 76%, 51%, 0.192) 0%,
+      hsl(284deg 70% 73%) 26%,
+      hsl(256, 29%, 15%) 39%,
+      hsl(203, 57%, 9%) 50%,
+      hsl(215, 49%, 21%) 61%,
+      hsl(221, 69%, 42%) 74%,
+      hsla(220, 100%, 41%, 0.986) 100%);
+}

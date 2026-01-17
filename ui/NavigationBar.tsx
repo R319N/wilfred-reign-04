@@ -3,7 +3,7 @@ import Logo from '@/components/Logo'
 import NavigationDrawer from '@/components/navigation-components/NavigationDrawer';
 import NavigationMenu from '@/components/navigation-components/NavigationMenu';
 import { styles } from '@/styles/styles';
-import { AppBar, AppBarProps, Box, Drawer, IconButton, SvgIcon, Toolbar, useScrollTrigger } from '@mui/material'
+import { AppBar, AppBarProps, Box, Divider, Drawer, IconButton, SvgIcon, Toolbar, useScrollTrigger } from '@mui/material'
 import React, { useId, useState } from 'react'
 
 interface ElevationScrollProps {
@@ -56,6 +56,7 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                 sx={{
                     zIndex: 90,
                     width: "100%",
+                    px:"2rem"
                 }}
             >
                 <ElevationScroll>
@@ -66,6 +67,7 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                             backdropFilter: trigger ? "blur(10px)" : "none",
                             overflow: "visible",
                             boxShadow: "none",
+                            // borderBottom:"1px solid white"
                         }}
                     >
                         <Toolbar
@@ -75,7 +77,7 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                                 maxWidth: "100vw",
                                 minHeight: "40px",
                                 width: "100%",
-                                p: { xs: "0.5rem 1rem", lg: "2rem 4rem" },
+                                p: { xs: "0.5rem 1rem", lg: "0.5rem 4rem" },
                                 m: 0,
                             }}
                         >
@@ -114,7 +116,9 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                             </IconButton>
                         </Toolbar>
                     </AppBar>
+                   
                 </ElevationScroll>
+                 <Divider/>
             </Box>
             <Drawer
                 {...rest}

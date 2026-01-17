@@ -1,13 +1,13 @@
 import { styles } from '@/styles/styles'
 import { Box, Stack, Typography } from '@mui/material'
 import React, { useRef } from 'react'
-import pxToRem from '../theme/functions/pxToRem'
 import { useGSAP } from '@gsap/react';
 import { Title } from '@mui/icons-material';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 // import { AldrichWrapper } from '@/ui/font-wrapper';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
+import pxToRem from '@/assets/theme/functions/pxToRem';
 
 interface HeadingTextProps {
     title: string;

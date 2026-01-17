@@ -6,7 +6,7 @@ import { Box, Stack, Typography } from '@mui/material'
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
 import SplitType from 'split-type'
 import { styles } from '@/styles/styles'
 

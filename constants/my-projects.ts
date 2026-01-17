@@ -1,4 +1,4 @@
-import { Portfolio } from "../../type";
+import { Portfolio } from "../type";
 
 const myProjects = [
   {

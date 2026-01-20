@@ -110,3 +110,11 @@ button:hover~.custom-cursor {
       hsl(221, 69%, 42%) 74%,
       hsla(220, 100%, 41%, 0.986) 100%);
 }
+.scroll-section{
+  height: 100vh;
+  width: 100vw;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  
+}

@@ -13,6 +13,9 @@ import MyPortfolio from "@/ui/MyPortfolio";
 import MyServices from "@/ui/MyServices";
 import ServicesCard from "@/components/ServicesCard";
 import HeroBase from "@/ui/HeroBase";
+import AboutMe from "@/ui/AboutMe";
+import HorizontalScrollSection from "@/components/HorizontalScroll";
+import MyWork from "@/components/MyWork";
 
 export default function Home() {
 
@@ -23,21 +26,25 @@ export default function Home() {
       <Paper
         sx={{
           minHeight: "100vh",
+          height: "100%",
           width: "100%",
           borderRadius: 0,
           margin: 0,
           p: 0,
-          overflow: "hidden",
+          // overflow: "hidden",
         }}
 
       >
         <NavigationBar />
-        <HeroBase/>
-        <ServicesCard/>
+        <HeroBase />
+        <AboutMe />
+        <MyServices />
+        <MyWork/>
+
         {/* <MyServices /> */}
         {/* <MyPortfolio /> */}
         {/* <HeroSection />  */}
-        {/* <FooterSection /> */}
+        <FooterSection />
       </Paper>
     </RootLayout>
   );

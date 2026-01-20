@@ -7,7 +7,7 @@ import CreatorStamp from "./creatorStamp";
 
 const Copyright = () => {
   return (
-    <Box display={{ sm: "flex", m: "0rem", height:"100%" }} justifyContent="space-between">
+    <Box display={{ sm: "flex", m: "0rem" }} justifyContent="space-between" sx={{ height:"100%", width:"100%"}}>
       <CreatorStamp />
       <Box
         sx={{

@@ -14,7 +14,7 @@ interface HorizontalScrollSectionProps {
 
 const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
   children,
-  height = 100,
+  height = 300,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -47,7 +47,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
     <Box
       ref={containerRef}
       sx={{
-        height: `${height}vh`,
+        height: "100%",
         overflow: "hidden",
         position: "relative",
       }}
@@ -56,7 +56,8 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
         ref={trackRef}
         sx={{
           display: "flex",
-          width: "max-content",
+          width: "100dvw",
+          height:"100vh"
         }}
       >
         {children}

@@ -222,6 +222,7 @@ const ServicesCard = () => {
         alignItems: 'center',
         background: `url(${webdev.src}) center/cover no-repeat`,
         position: 'relative',
+        width:"100%"
       }}
     >
       <BackgroundOverlay />

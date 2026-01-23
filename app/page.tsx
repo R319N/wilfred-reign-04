@@ -31,7 +31,7 @@ export default function Home() {
           borderRadius: 0,
           margin: 0,
           p: 0,
-          // overflow: "hidden",
+          overflow: "hidden",
         }}
 
       >
@@ -39,9 +39,7 @@ export default function Home() {
         <HeroBase />
         <AboutMe />
         <MyServices />
-        <MyWork/>
-
-        {/* <MyServices /> */}
+        {/* <MyWork/> */}
         {/* <MyPortfolio /> */}
         {/* <HeroSection />  */}
         <FooterSection />

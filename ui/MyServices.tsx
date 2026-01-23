@@ -72,7 +72,7 @@ const MyServices = () => {
                     pin: true
                 }
             })
-        })
+        }, sectionRef)
 
         return () => {
             pin.kill()

@@ -17,7 +17,6 @@ interface LogoProps {
 const Logo = ({ fontSize }: LogoProps) => {
   return (
     <Box sx={{ ...styles.center_flex, height: "100%", position: "relative" }}>
-      {/* Image Stroke */}
       <Typography
         sx={{
           ...silkscreen.style,
@@ -30,12 +29,11 @@ const Logo = ({ fontSize }: LogoProps) => {
           WebkitTextStroke: "8px transparent", // thickness
           filter: "blur(0)",
           backgroundSize: "30% auto",
+          lineHeight:"100%"
         }}
       >
         w
       </Typography>
-
-
       <Typography
         sx={{
           ...silkscreen.style,
@@ -48,6 +46,7 @@ const Logo = ({ fontSize }: LogoProps) => {
           WebkitTextStroke: "8px transparent", // thickness
           filter: "blur(0)",
           opacity: 0.6,
+          lineHeight:"100%"
         }}
       >
         w
@@ -61,7 +60,7 @@ const Logo = ({ fontSize }: LogoProps) => {
           position: "relative",
           color: "#0e1116cc", // hollow center
           WebkitTextStroke: "1.5px transparent",
-          // scaleX:"1.4"
+          lineHeight:"100%"
         }}
       >
         w

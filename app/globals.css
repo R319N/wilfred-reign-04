@@ -67,7 +67,7 @@ button:hover~.custom-cursor {
   left: -20%;
   top: 5%;
   z-index: 1;
-   background-image: linear-gradient(270deg,
+  background-image: linear-gradient(270deg,
       hsla(295, 76%, 51%, 0.192) 0%,
       hsl(284deg 70% 73%) 26%,
       hsl(256, 29%, 15%) 39%,
@@ -85,7 +85,6 @@ button:hover~.custom-cursor {
   height: 100vh;
   left: 30%;
   top: 10%;
-  z-index: -1;
   background: rgba(45, 72, 152, 0.75);
   filter: blur(200px);
   transform: rotate(-53.13deg);
@@ -110,11 +109,29 @@ button:hover~.custom-cursor {
       hsl(221, 69%, 42%) 74%,
       hsla(220, 100%, 41%, 0.986) 100%);
 }
-.scroll-section{
+
+.footer-gradient {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  transform: translate(0%, 50%);
+  left: 25%;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(300px);
+  background-image: radial-gradient(#7E78D2 0%,
+      #5F5B9F 15%,
+      #413E6C 49%,
+      #1F2041 100%);
+
+}
+
+.scroll-section {
   height: 100vh;
   width: 100vw;
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  
+
 }

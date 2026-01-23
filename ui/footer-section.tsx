@@ -19,7 +19,7 @@ const FooterSection = () => {
         const el = mottoRef.current
         const ctx = gsap.context(() => {
             const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-                const textTL = gsap.timeline({ repeat: -1, repeatDelay: 0.4 });
+            const textTL = gsap.timeline({ repeat: -1, repeatDelay: 0.4 });
             // Logo rotation
             motto.forEach((job, i) => {
                 textTL.to(el, {
@@ -37,12 +37,12 @@ const FooterSection = () => {
                         }
                     },
                 })
-                .to(el, {
-                    duration: 3,
-                    opacity: 1,
-                    y: 0,
-                    ease: "power3.out",
-                });
+                    .to(el, {
+                        duration: 3,
+                        opacity: 1,
+                        y: 0,
+                        ease: "power3.out",
+                    });
             });
             tl.fromTo(
                 logoRef.current,
@@ -84,16 +84,19 @@ const FooterSection = () => {
                 <Box sx={{
                     ...styles.center_flex,
                     flexDirection: "column",
-                    height: "100%"
+                    height: "100%",
+                    width: "100%"
                 }}
                     gap={2}
                 >
-                    <Stack gap={6}>
+                    <Stack sx={{  width: "100%" }} gap={6}>
                         <Box
                             ref={logoRef}
                             sx={{
+                                ...styles.center_flex,
+                                width: "100%",
+
                                 position: {
-                                    xs: "absolute",
                                     md: "relative"
                                 },
                                 opacity: { xs: 0.3, md: 1 },
@@ -115,9 +118,7 @@ const FooterSection = () => {
                                 backgroundImage: `linear-gradient(90deg, #3772FF,#7E78D2, #7D2EB2)`,
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
-
-
-                            }}>
+                           }}>
                             . {motto} .
                         </Typography>
                     </Stack>
@@ -125,11 +126,13 @@ const FooterSection = () => {
                 </Box>
                 <Stack>
                     <Box
-                        sx={{ ...styles.between_flex, flexDirection: { xs: 'column', lg: "row" } }}
+                        sx={{
+                             ...styles.between_flex, 
+                            flexDirection: { xs: 'column', lg: "row" } }}
                         gap={2}
                     >
                         <FooterNavigation />
-                        <Box sx={{ ...styles.center_flex, }} gap={2}>
+                        <Box sx={{ display:"flex", alignItems:"center", justifyContent:"center" }} gap={2}>
                             <Typography textTransform={"capitalize"}>
                                 stay in touch
                             </Typography>

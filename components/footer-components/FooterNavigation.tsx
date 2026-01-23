@@ -1,11 +1,12 @@
 import navigation from '@/constants/navigation_Links'
+import { styles } from '@/styles/styles';
 import { List, ListItem, ListItemText } from '@mui/material'
 import React from 'react'
 
 const FooterNavigation = () => {
     const footerLink = navigation.filter((item) => item.isTab);
     return (
-        <List sx={{ display: "flex" }}>
+        <List sx={{ ...styles.between_flex, flexDirection: { xs: 'column', lg: "row" } }}>
             {footerLink.map((link, index) => (
                 <ListItem key={index}>
                     <ListItemText sx={{ textTransform: "capitalize", mx: "1rem" }}>

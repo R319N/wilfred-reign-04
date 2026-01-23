@@ -56,7 +56,7 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                 sx={{
                     zIndex: 90,
                     width: "100%",
-                    px:"2rem"
+                    px:{xs:0 , lg:"2rem"}
                 }}
             >
                 <ElevationScroll>

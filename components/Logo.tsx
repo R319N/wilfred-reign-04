@@ -18,10 +18,11 @@ const Logo = ({ fontSize }: LogoProps) => {
   return (
     <Box sx={{ ...styles.center_flex, height: "100%", position: "relative" }}>
       <Typography
+      className='font-black'
         sx={{
           ...silkscreen.style,
           fontSize: { fontSize },
-          fontWeight: "bolder",
+          // fontWeight: "bolder",
           position: "absolute",
           backgroundImage: `url(${heroImage.src})`,
           WebkitBackgroundClip: "text",
@@ -35,10 +36,11 @@ const Logo = ({ fontSize }: LogoProps) => {
         w
       </Typography>
       <Typography
+         className='font-black'
         sx={{
           ...silkscreen.style,
           fontSize: { fontSize },
-          fontWeight: "bolder",
+          // fontWeight: "bolder",
           position: "absolute",
           backgroundImage: `linear-gradient(90deg, #3772FF,#0022ff ,#7E78D2, #7D2EB2)`,
           WebkitBackgroundClip: "text",
@@ -53,10 +55,11 @@ const Logo = ({ fontSize }: LogoProps) => {
       </Typography>
       {/* Main Text */}
       <Typography
+         className='font-black'
         sx={{
           ...silkscreen.style,
           fontSize: { fontSize },
-          fontWeight: "bold",
+          // fontWeight: "bold",
           position: "relative",
           color: "#0e1116cc", // hollow center
           WebkitTextStroke: "1.5px transparent",

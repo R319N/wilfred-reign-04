@@ -12,7 +12,13 @@ const sairaStencil = Saira_Stencil_One({
 
 gsap.registerPlugin(ScrollTrigger)
 
-const HeadingText3 = () => {
+interface Props {
+    header: string
+    subHeader: string
+
+}
+
+const HeadingText3: React.FC<Props> = ({ header, subHeader }) => {
     const sectionRef = useRef<HTMLDivElement | null>(null)
     const textRef = useRef<HTMLParagraphElement | null>(null)
     const wrapperRef = useRef<HTMLDivElement | null>(null)
@@ -42,36 +48,32 @@ const HeadingText3 = () => {
 
 
     return (
-        // <Box
-        //     ref={wrapperRef}
-        //     sx={{
-        //         ...styles.center_flex,
-        //         // height: "100%"
-        //     }}
-        // >
-            <Box ref={headerRef} sx={{}}>
-                <Typography
+        <Box ref={headerRef} sx={{}}>
+            <Typography
 
-                    sx={{
-                        ...sairaStencil.style,
-                        textTransform: "uppercase",
-                        fontSize: pxToRem(32),
-                        lineHeight: "1.8",
-                        background: "linear-gradient(45deg,#7E78D2 , 70%, #00CCFF )",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundClip: 'text',
-                        color: 'transparent !important',
-                        textWrap: "noWrap",
-                        textAlign: "center"
-                    }}
-                >
-                    My Story
-                </Typography>
-            </Box>
-        // </Box>
+                sx={{
+                    ...sairaStencil.style,
+                    textTransform: "uppercase",
+                    fontSize: pxToRem(32),
+                    lineHeight: "1.8",
+                    background: "linear-gradient(45deg,#7E78D2 , 70%, #00CCFF )",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundClip: 'text',
+                    color: 'transparent !important',
+                    textWrap: "noWrap",
+                    textAlign: "center"
+                }}
+            >
+                {subHeader}
+
+            </Typography>
+            <Typography sx={{ textAlign: "center", textTransform: "capitalize" }}>
+                {header}
+            </Typography>
+        </Box>
     )
 }
 

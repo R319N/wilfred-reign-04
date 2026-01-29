@@ -242,7 +242,7 @@ and a genuine love for what you do.
                 scrub: true,
                 pin: true,
                 pinSpacing: true,
-                markers: true,
+                // markers: true,
             },
         })
         tl.to(imageRef.current, {
@@ -251,7 +251,7 @@ and a genuine love for what you do.
             end: '+=1000',
             pin: imageRef.current,
             pinSpacing: true,
-            markers: true
+            // markers: true
         })
 
         // Word color scroll
@@ -291,7 +291,7 @@ and a genuine love for what you do.
                     background: '#0e1116',
                 }}
             >
-                <HeadingText3 />
+                <HeadingText3 header='about me' subHeader='more than what i do'/>
             </Box>
 
             {/* CONTENT */}

@@ -67,7 +67,7 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                             backdropFilter: trigger ? "blur(10px)" : "none",
                             overflow: "visible",
                             boxShadow: "none",
-                            // borderBottom:"1px solid white"
+                            p: { xs: "0.5rem 1rem", lg: "0" },
                         }}
                     >
                         <Toolbar
@@ -77,7 +77,7 @@ const NavigationBar: React.FC<DashBoardNavigationProps> = ({
                                 maxWidth: "100vw",
                                 minHeight: "40px",
                                 width: "100%",
-                                p: { xs: "0.5rem 1rem", lg: "0.5rem 4rem" },
+                             
                                 m: 0,
                             }}
                         >

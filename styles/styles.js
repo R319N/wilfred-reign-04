@@ -15,14 +15,17 @@ export const styles = {
     width: "100%",
     display: "flex",
   },
+  defaultBorder: {
+    border: "1px solid #FAF0E633",
+  },
   borderRadius: {
     borderRadius: "10px",
-    border: "1px solid #dec5e355 ",
+    overflow:"hidden"
   },
   iconWrap: {
     borderRadius: "8px",
     height: "32px", width: "32px",
-    border: "1px solid #D0A5C055",
+    border: "1px solid #7E78D255",
   },
   container: {
     width: "100%",

@@ -1,106 +1,147 @@
 'use client'
-import ServicesCard from '@/components/ServicesCard'
-// import HorizontalScrollSection from '@/components/HorizontalScroll'
-// import { Box } from '@mui/material'
-// import React from 'react'
-
-// const MyServices = () => {
-//     return (
-//         <Box sx={{height:"300vh"}}>
-
-
-//             <HorizontalScrollSection height={300}>
-//                 {[1, 2].map((item) => (
-//                     <Box
-//                         key={item}
-//                         sx={{
-//                             minWidth: "100vw",
-//                             height: "100vh",
-//                             display: "flex",
-//                             alignItems: "center",
-//                             justifyContent: "center",
-//                             fontSize: "4rem",
-//                             backgroundColor: item % 2 ? "#111" : "#222",
-//                             color: "white",
-//                         }}
-//                     >
-//                         Section {item}
-//                     </Box>
-//                 ))}
-//             </HorizontalScrollSection>
-//         </Box>
-
-//     )
-// }
-
-// export default MyServices
-
-
-import { Box } from '@mui/material'
+import RareCard from '@/components/RareCard'
+import { Box, Container, Stack, Typography } from '@mui/material'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import webdev from '@/public/images/webdev.jpg'
+import uiux from '@/public/images/design.jpg'
+import ourServices from '@/constants/our_services-data'
+import pxToRem from '@/assets/theme/functions/pxToRem'
+import { Saira_Stencil_One } from 'next/font/google'
+import rgba from '@/assets/theme/functions/rgba'
+import { styles } from '@/styles/styles'
+import HeadingText3 from '@/components/headers/HeadingText3'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const sairaStencil = Saira_Stencil_One({
+    weight: ['400'],
+    subsets: ['latin'],
+    display: 'swap',
+})
 
 const MyServices = () => {
     const sectionRef = useRef<HTMLDivElement>(null)
     const triggerRef = useRef<HTMLDivElement>(null)
-
+    const [active, setActive] = useState(0)
+    const slides = ourServices
 
     useEffect(() => {
-        if (!sectionRef.current || !triggerRef.current) return;
-
-        const pin = gsap.context(() => {
-            const scrollWidth = triggerRef.current!.scrollWidth;
-            const viewportWidth = window.innerWidth;
-
-            gsap.fromTo(sectionRef.current, {
-
-                translateX: 0
-            }, {
-
-                translateX: "-100vw",
+        const ctx = gsap.context(() => {
+            gsap.to(".track", {
+                xPercent: -100 * (slides.length - 1),
                 ease: "none",
-                // duration: 1,
                 scrollTrigger: {
-                    trigger: triggerRef.current,
-                    start: "top top ",
-                    end: () => `+=${scrollWidth}`,
-                    scrub: 0.6,
-                    anticipatePin: 2,
-                    pin: true
-                }
+                    trigger: ".pinned-section",
+                    pin: true,
+                    scrub: 1,
+                    anticipatePin: -1, // 👈 small visual improvement
+                    snap: {
+                        snapTo: 1 / (slides.length - 1),
+                        duration: 0.05,
+                        ease: "power2.out",
+                    },
+                    end: () => "+=" + window.innerWidth * slides.length,
+                },
             })
-        }, sectionRef)
 
-        return () => {
-            pin.kill()
-        }
+        })
+
+        return () => ctx.revert()
     }, [])
 
+    useEffect(() => {
+        ScrollTrigger.create({
+            trigger: ".pin-wrapper",
+            start: "top-+100%",
+            end: "bottom",
+            onUpdate: (self) => {
+                const index = Math.round(self.progress * (slides.length - 1))
+                setActive(index)
+            },
+        })
+    }, [])
+
+
     return (
-        <Box sx={{ overflow: "hidden" }}>
-            <div ref={triggerRef}>
-                <Box ref={sectionRef} sx={{
-                    height: "100vh",
-                    width: "200vw",
-                    display: "flex",
-                    position: "relative ",
-                    opacity: 1
-                }}>
 
-                    <Box className="scroll-section" sx={{ width: "100vw" }}>
-                        <ServicesCard />
-                    </Box>
-                    <Box className="scroll-section ">
-                        <ServicesCard />
-                    </Box>
+        <Container className="pin-wrapper" sx={{}}>
 
+            <Stack className="pinned-section" sx={{ position: "relative", height: "100vh", overflow: "visible" }} gap={10}>
+                <div className='gradient-06' />
+             <Box sx={{ position:  "relative", height:"100vh", pt: "12vh", ...styles.column_flex, justifyContent: "center", alignItems: "center" }}>
 
+                    <HeadingText3
+                    header='my services'
+                    subHeader='what i do'
+                    />
                 </Box>
-            </div>
-        </Box>
+                <Box
+                    className="track"
+                    sx={{
+                        display: "flex",
+                        width: '100%',
+                        height: "100%"
+                    }}
+                >
+                    {slides.map((slide, i) => (
+                        <Box key={i} sx={{ width: "100%", flexShrink: 0, position: "relative" }}>
+                            <RareCard
+                                textColor={slide.color}
+                                stroke="2px #7E78D2"
+                                imgSrc={slide.imgURL}
+                                firstWord={slide.firstWord}
+                                secondWord1={slide.secondWord1}
+                                secondWord2={slide.secondWord2}
+                            // {...slide}
+                            />
+                        </Box>
+                    ))}
+                </Box>
+
+                <Box
+                    sx={{
+                        position: "relative",
+                        bottom: 0,
+                        display: "flex",
+                        // transform: "translate(-10%, -80%)",
+                        flexDirection: "column",
+                        alignItems: "flex-end",
+                        justifyContent: "flex-end",
+                        gap: 1,
+                        zIndex: 1000,
+                        width: "100%",
+                       pb:"16vh"
+                    }}
+                >
+                    {slides.map((_, i) => (
+                        <Box
+                            key={i}
+                            sx={{
+                                display: "flex",
+                                justifyContent: "flex-end", // 👈 pushes dot right
+                                width: "100%",
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    width: active === i ? 46 : 24, // 👈 fixed width
+                                    height: 8,
+                                    borderRadius: 999,
+                                    transition: "width 0.25s ease, background-color 0.25s ease",
+                                    backgroundColor: active === i ? "#7E78D2" : rgba("#7E78D2", 0.2),
+                                }}
+                            />
+                        </Box>
+                    ))}
+                </Box>
+
+            </Stack>
+        </Container>
+
+
+
     )
 }
 

@@ -1,27 +1,52 @@
 interface Testimonials {
   author: string,
   testimonial: string,
+  image: string,
   rating: number,
-  relationship: string,
+  position: string,
+  company: string
+
 }
 
 const testimonialReviewData: Testimonials[] = [
   {
-    author: 'thandi m.',
-    testimonial: "Smart Me Academy has been a game-changer for my son. The flexible schedule allowed him to balance his studies and extracurriculars without stress, and the personalised tutoring in Maths has boosted his confidence so much. The tutors are incredibly supportive, and I feel like they truly care about each learner’s progress.",
-    relationship: 'parent',
+    author: 'kevin Smith',
+    testimonial: 'I love the way the team works together to deliver high-quality results.',
+    image: '/female-icon.png',
+    company: 'office creators',
+    position: 'founder',
     rating: 5
   },
   {
-    author: 'Sipho L.',
-    relationship: 'student',
-    testimonial: "The high school program at Smart Me Academy has given me the freedom to learn at my own pace. I used to struggle with Maths, but the extra sessions before exams and one-on-one Saturday support have made a huge difference. I feel more prepared than ever for my exams!",
+    author: 'mduduzi mabaso',
+    company: 'interco logistics',
+    position: 'founder',
+    testimonial: 'great work , we are happy with the service.',
+    image: '/female-icon.png',
     rating: 3
   },
   {
-    author: 'Nomvula K.',
-    relationship: 'parent',
-    testimonial: "I was so impressed with the foundation phase program for my daughter! The activities are engaging, and she’s already reading and counting confidently. Smart Me Academy has given her the best start possible, and I love how much care and effort the tutors put into making learning fun.",
+    author: 'dineo selopedi',
+    company: 'shoe freaks',
+    position: 'ceo',
+    testimonial: 'we are happy with the work done.',
+    image: '/male-icon.png',
+    rating: 4
+  },
+  {
+    author: 'mduduzi mabaso',
+    company: 'interco logistics',
+    position: 'founder',
+    testimonial: 'thank you for meeting our expectations',
+    image: '/female-icon.png',
+    rating: 3
+  },
+  {
+    author: 'andrew smith',
+    company: 'shoe freaks',
+    position: 'ceo',
+    testimonial: 'we are happy with the work done.',
+    image: '/male-icon.png',
     rating: 4
   },
 ]

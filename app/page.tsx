@@ -16,6 +16,9 @@ import HeroBase from "@/ui/HeroBase";
 import AboutMe from "@/ui/AboutMe";
 import HorizontalScrollSection from "@/components/HorizontalScroll";
 import MyWork from "@/components/MyWork";
+import Testimonials from "@/ui/testimonials";
+import ContactSection from "@/ui/contact-section";
+import RareCard from "@/components/RareCard";
 
 export default function Home() {
 
@@ -39,8 +42,11 @@ export default function Home() {
         <HeroBase />
         <AboutMe />
         <MyServices />
-        {/* <MyWork/> */}
         {/* <MyPortfolio /> */}
+        {/* <RareCard /> */}
+        <Testimonials />
+        <ContactSection />
+
         {/* <HeroSection />  */}
         <FooterSection />
       </Paper>

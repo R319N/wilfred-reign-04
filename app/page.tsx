@@ -42,11 +42,11 @@ export default function Home() {
         <HeroBase />
         <AboutMe />
         <MyServices />
-        {/* <MyPortfolio /> */}
+         {/* <MyPortfolio /> */}
         {/* <RareCard /> */}
         <Testimonials />
         <ContactSection />
-
+       
         {/* <HeroSection />  */}
         <FooterSection />
       </Paper>

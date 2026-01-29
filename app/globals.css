@@ -2,9 +2,17 @@
 @import 'tailwindcss';
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+}
+html,
+body {
+  height: auto;
+  overflow-x: hidden;
 }
 
+html {
+  -webkit-overflow-scrolling: touch;
+}
 .custom-cursor {
   position: fixed;
   top: 0;
@@ -25,7 +33,7 @@ button:hover~.custom-cursor {
   transform: scale(1.8);
 }
 
-.cursor-follower {
+/* .cursor-follower {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,12 +41,11 @@ button:hover~.custom-cursor {
   height: 2rem;
   border-radius: 50%;
   border: 1px solid #FAF0E6;
-  /* background: #00e5ff; */
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.12s ease-out;
   will-change: transform, opacity;
-}
+} */
 
 .gradient-01 {
   background-image: linear-gradient(270deg,
